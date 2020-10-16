@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<form>
+<input placeholder='Логин' id="log"></input>
+<input placeholder='Пароль' id="pass"></input>
+<p id = "otp"></p>
+</form>
+</body>
+<script>
+  let inp = document.getElementById("log");
+  let pass = document.getElementById("pass");
+
+
+  inp.oninput = function() {
+  if((inp.value =="admin")&&(pass.value =="admin")){
+      document.getElementById('otp').innerHTML = "Success";
+  }
+  else{
+    document.getElementById('otp').innerHTML = "";  
+  }
+  pass.oninput = function() {
+  if((inp.value =="admin")&&(pass.value =="admin")){
+      document.getElementById('otp').innerHTML = "Success";
+  }
+  else{
+    document.getElementById('otp').innerHTML = "";
+  }
+  }
+
+  } 
+</script>
+</html>
