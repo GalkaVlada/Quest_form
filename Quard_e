@@ -11,7 +11,7 @@ double quadratic_equation(double a, double b, double c, double *x1,double *x2 ){
 
     if (b == 0){
         *x1 = sqrt(-c/a);
-        *x2 = -1*sqrt(-c/a);
+        *x1 = -*x2; 
           cout<<"Okey"<< endl;
     return 1;
   }
