@@ -10,17 +10,23 @@ double quadratic_equation(double a, double b, double c, double *x1,double *x2 ){
 }
 
     if (b == 0){
+      if (-c/a < 0){
+         cout<<"Unsolvable"<< endl;
+    return 0;
+    
+  }
         *x1 = sqrt(-c/a);
         *x1 = -*x2; 
           cout<<"Okey"<< endl;
-    return 1;
+     return 1;
+
   }
     
 
 double D = b * b - 4 * a * c;
   
     if (D < 0){
-          cout<<"Unsolvable"<< endl;
+          cout<<"Unsolvable."<< endl;
     return 0;
   }
   
@@ -38,9 +44,9 @@ double D = b * b - 4 * a * c;
 }
 
     int main(){
-        double a = 1;
+        double a = 4;
         double b = 0;
-        double c= 9;
+        double c= 0;
         double x1;
         double x2;
 
