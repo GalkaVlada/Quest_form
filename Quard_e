@@ -1,0 +1,58 @@
+#include <iostream>
+#include <cmath>   
+using namespace std;
+//ax2 + bx + c = 0;
+double quadratic_equation(double a, double b, double c, double *x1,double *x2 ){
+
+    if(a == 0){
+          cout<<"Unreal quadratic equation!"<< endl;
+    return 0;
+}
+
+    if (b == 0){
+        *x1 = sqrt(-c/a);
+        *x2 = -1*sqrt(-c/a);
+          cout<<"Okey"<< endl;
+    return 1;
+  }
+    
+
+double D = b * b - 4 * a * c;
+  
+    if (D < 0){
+          cout<<"Unsolvable"<< endl;
+    return 0;
+  }
+  
+    if (D == 0){
+        *x1 = b / (-2 * a);
+        *x2 = *x1;
+          cout<<"Okey"<< endl;
+  }
+  
+        *x1  = (-1 * b - sqrt(D)) / 2 / a;
+        *x2  = (-1 * b + sqrt(D)) / 2 / a;
+          cout<<"Okey"<< endl;
+
+    return 1;
+}
+
+    int main(){
+        double a = 1;
+        double b = 0;
+        double c= 9;
+        double x1;
+        double x2;
+
+    int ret_value = quadratic_equation(a,b,c,&x1,&x2);
+
+    if(ret_value == 1){
+            cout << "x1 = " << x1 << endl; 
+            cout << "x2 = " << x2 << endl; 
+}
+    else 
+            cout << "quadratic_equation_failed" << endl;
+   
+    return 0;
+   
+}
