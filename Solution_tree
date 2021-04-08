@@ -1,0 +1,85 @@
+#include <iostream>
+
+using namespace std;
+
+struct TreeNode {
+    int data;
+    struct TreeNode *left;
+    struct TreeNode *right;
+};
+
+struct Tree {
+    struct TreeNode *root;
+};
+
+
+void tree_push(struct Tree *tree, int elem) {
+    //check errors
+    struct TreeNode *treeNode = (struct TreeNode *)malloc(sizeof(struct TreeNode));
+    treeNode->data = elem;
+    
+                                                          
+}
+
+void tree_add_node(struct TreeNode *node, struct TreeNode *new_node) {
+    if (new_node->data <= node->data) {
+        tree_add_node(node->left, new_node);
+    } else {
+        tree_add_node(node->right, new_node);
+    }
+}
+void tree_constr(struct Tree *tree) {
+    tree->root = NULL;
+}
+ 
+void tree_distruct(struct Tree *tree){
+    if (TreeNode != NULL) {
+        delete(TreeNode->left); 
+        delete(TreeNode->right); 
+        delete Tree; 
+        Tree = NULL;
+    }
+} 
+void tree_find(TreeNode *left,TreeNode *right, int data)
+{
+    if (TreeNode != NULL)
+    {
+        if(TreeNode->data == data ){
+            cout << TreeNode->data;
+            cout << " left = "<<TreeNode->left->data;
+            cout << " right = " << TreeNode->right->data;
+            return;
+        }
+        find(TreeNode->left,data);
+        find(TreeNode->right,data);
+    }
+}
+
+
+
+// ErrorType tree_add_node(TreeNode *node,TreeNode, *new ){
+   // if(!node -> left){
+   //     return SUCCESS;
+//}}
+
+// ErrorType tree_find_element( Tree *tree, int value , TreeNode *node){
+
+// }
+ // ErrorType tree_find_element_node( TreeNode *current_node, int value , TreeNode *node){
+ // if(current_node -> Data == node.Data )
+// }
+
+// int main(int argc, const char * argv[]) {
+
+int main()
+{
+ //   cout<<"Hello World";
+
+//    return 0;
+
+//int a=1, b=2;
+  //  if(a = b/n){
+     //   printf("a !=b/n")
+    // }
+}
+
